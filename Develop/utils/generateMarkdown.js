@@ -3,6 +3,8 @@
 function renderLicenseBadge(license) {
   if(license !== "none") {
     return `![GitHub license](https://img.shields.io/badge/license-${license}-blue.svg)`
+  } else {
+    return " "
   }
 }
 
@@ -11,6 +13,8 @@ function renderLicenseBadge(license) {
 function renderLicenseLink(license) {
   if(license !== "none") {
     return `* [license](#license)`
+  } else {
+    return " "
   }
 }
 
@@ -21,6 +25,8 @@ function renderLicenseSection(license) {
     return `## License 
     
     This project is licensed under the ${license} license.`
+  } else {
+    return " "
   }
 }
 
@@ -39,8 +45,8 @@ function generateMarkdown(questions) {
   
   * [Installation](#installation)
   * [Usage](#usage)
-  ${renderLicenseLink(questions.license)}
   * [Credits](#credits)
+  ${renderLicenseLink(questions.license)}
   
   
   
